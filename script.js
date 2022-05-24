@@ -11,15 +11,15 @@
     }
     ex1c.innerHTML = data;
   })
-const ex2 = document.querySelector('ex2_text')
-  const ex2c = document.querySelector('ex2_content')
-  
-  ex2.addEventListener("focus", function () {
-    ex2c.innerHTML = "";
-  });
-  ex2.addEventListener("blur",function(){
-            ex2c.innerHTML = "";
-        });
+const ex2 = document.querySelector('ex2_text');
+const ex2c = document.getElementById('values');
+
+ex2.addEventListener('ex2_text', updateValue);
+
+function updateValue(e) {
+  ex2c.textContent = e.target.value;
+}
+
    
   
  
